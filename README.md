@@ -1,5 +1,6 @@
 # CarND-Traffic-Light-Classifier
 Traffic Light Classifier for the Term 3 Capstone Project
+
 This traffic light classifier was trained using the [SSD Inception V2 model](https://arxiv.org/pdf/1512.00567v3.pdf). 
 
 This notebook was adapted from material in the [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). Make sure to follow the [installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) before you start. I used [coldKnight's labeled dataset](https://github.com/coldKnight/TrafficLight_Detection-TensorFlowAPI#get-the-dataset) for training and [Alex Lechler's labeled dataset](https://github.com/alex-lechner/Traffic-Light-Classification) for testing.
