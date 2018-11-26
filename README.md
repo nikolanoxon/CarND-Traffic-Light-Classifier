@@ -28,6 +28,7 @@ python object_detection/builders/model_builder_test.py
 
 #### Download and extract the SSD Inception V2 model to ./models
 wget http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_2017_11_17.tar.gz
+
 tar -xvzf ssd_inception_v2_coco_2017_11_17.tar.gz
 
 #### Download the datasets
@@ -40,6 +41,6 @@ unzip alex-lechner-udacity-traffic-light-dataset.zip?dl=0
 unzip dataset-sdcnd-capstone.zip?dl=0 
 
 #### Train the Classifiers 
-
 python train.py --logtostderr --train_dir=./models/sim/train --pipeline_config_path=./config/ssd_inception_v2_coco_sim.config
+
 python train.py --logtostderr --train_dir=./models/real/train --pipeline_config_path=./config/ssd_inception_v2_coco_real.config
