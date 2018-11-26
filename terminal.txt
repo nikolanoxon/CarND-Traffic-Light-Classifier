@@ -1,0 +1,34 @@
+sudo apt-get install protobuf-compiler python-pil python-lxml python-tk
+pip install tensorflow-gpu==1.4
+pip install matplotlib
+
+cd /opt
+git clone https://github.com/alex-lechner/Traffic-Light-Classification.git
+
+cd /home/workspace
+mkdir tensorflow
+cd tensorflow
+git clone https://github.com/tensorflow/models.git
+
+cd models
+git checkout f7e99c0
+
+cd research
+protoc object_detection/protos/*.proto --python_out=.
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+python object_detection/builders/model_builder_test.py
+
+
+cd /opt/Traffic-Light-Classification/models
+wget http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_2017_11_17.tar.gz
+tar -xvzf ssd_inception_v2_coco_2017_11_17.tar.gz
+
+cd /opt/Traffic-Light-Classification/data
+rm udacity_label_map.pbtxt
+wget https://www.dropbox.com/s/vaniv8eqna89r20/alex-lechner-udacity-traffic-light-dataset.zip?dl=0
+wget https://www.dropbox.com/s/bvq7q1zoex3b46i/dataset-sdcnd-capstone.zip?dl=0 
+unzip alex-lechner-udacity-traffic-light-dataset.zip?dl=0
+unzip dataset-sdcnd-capstone.zip?dl=0 
+
+cd /opt/Traffic-Light-Classification
+python train.py --logtostderr --train_dir=./models/train --pipeline_config_path=./config/ssd_inception_v2_coco_sim.config
