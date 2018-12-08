@@ -15,7 +15,7 @@ pip install tensorflow-gpu==1.4
 pip install matplotlib
 
 #### Clone this repo to your workspace
-git clone XXXX
+git clone https://github.com/nikolanoxon/CarND-Traffic-Light-Classifier.git
 
 #### Clone the Tensorflow models repo to your workspace
 git clone https://github.com/tensorflow/models.git
