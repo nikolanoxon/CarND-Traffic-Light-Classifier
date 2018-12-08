@@ -3,7 +3,7 @@ Traffic Light Classifier for the Term 3 Capstone Project
 
 This traffic light classifier was trained using the [SSD Inception V2 model](https://arxiv.org/pdf/1512.00567v3.pdf). 
 
-This notebook was adapted from material in the [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). Make sure to follow the [installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) before you start. I used [coldKnight's labeled dataset](https://github.com/coldKnight/TrafficLight_Detection-TensorFlowAPI#get-the-dataset) for training and [Alex Lechler's labeled dataset](https://github.com/alex-lechner/Traffic-Light-Classification) for testing.
+This notebook was adapted from material in the [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). Make sure to follow the [installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) before you start. I used [coldKnight's labeled dataset](https://github.com/coldKnight/TrafficLight_Detection-TensorFlowAPI#get-the-dataset) for training and [Alex Lechler's labeled dataset](https://github.com/alex-lechner/Traffic-Light-Classification) for validation.
 
 # Installation Instructions
 
@@ -36,6 +36,10 @@ wget http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coc
 tar -xvzf ssd_inception_v2_coco_2017_11_17.tar.gz
 
 #### Download the datasets
+For the sim dataset, use the record files in the data folder
+
+The track datasets can be downloaded here:
+
 wget https://www.dropbox.com/s/vaniv8eqna89r20/alex-lechner-udacity-traffic-light-dataset.zip?dl=0
 
 wget https://www.dropbox.com/s/bvq7q1zoex3b46i/dataset-sdcnd-capstone.zip?dl=0 
